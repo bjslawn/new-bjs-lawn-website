@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-  <base href="/new-bjs-lawn-website/">
+  <base href="/">
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Lawn Care & Landscaping in Palatine IL | BJ’s Lawn Service</title>
@@ -104,7 +104,7 @@
 
           <div class="col-lg-6">
             <div class="hero-image">
-              <img src="assets/img/project-7.webp" alt="Construction Project" class="img-fluid">
+              <img src="assets/img/hero-image.webp" alt="Construction Project" class="img-fluid">
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@
           <div class="col-lg-4">
             <div class="service-card">
               <div class="service-icon">
-                <i class="bi bi-gear"></i>
+                <i class="bi bi-leaf"></i>
               </div>
               <h3>Landscaping Services</h3>
               <p>From lawn repairs to material delivery, we handle the projects that keep your yard functional and well maintained.</p>
@@ -165,7 +165,7 @@
           <div class="col-lg-4">
             <div class="service-card">
               <div class="service-icon">
-                <i class="bi bi-building"></i>
+                <i class="bi bi-tree"></i>
               </div>
               <h3>Lawn &amp; Yard Maintenance</h3>
               <p>Regular upkeep keeps your property healthy and looking its best throughout the year. Our team handles routine care and seasonal work.</p>
@@ -426,7 +426,7 @@ His crew arrived as planned and did a great job!"</p>
             <div class="about-image position-relative">
               <img src="assets/img/project-3.webp" alt="Construction Team" class="img-fluid main-image rounded">
               <div class="image-overlay">
-                <img src="assets/img/hero-image.webp" alt="Construction Project" class="img-fluid rounded">
+                <img src="assets/img/project-8.webp" alt="Construction Project" class="img-fluid rounded">
               </div>
               <div class="experience-badge">
                 <span>25+</span>
@@ -481,7 +481,7 @@ His crew arrived as planned and did a great job!"</p>
                   <p>Contact us today to schedule your free lawn care or landscaping estimate.</p>
                 </div>
 
-                <form action="forms/get-a-quote.php" method="post" class="php-email-form">
+                <form action="https://formspree.io/f/mlgwpnnd" method="post">
                   <div class="row g-3">
                     <div class="col-md-6">
                       <div class="form-group">
@@ -498,16 +498,17 @@ His crew arrived as planned and did a great job!"</p>
                         <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required="">
                       </div>
                     </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Your Address" required="">
+                      </div>
+                    </div>
                     <div class="col-12">
                       <div class="form-group">
-                        <textarea name="message" class="form-control" rows="4" placeholder="Project Details"></textarea>
+                        <textarea name="message" class="form-control" rows="4" placeholder="Project Details" required=""></textarea>
                       </div>
                     </div>
                   </div>
-
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your quote request has been sent. Thank you!</div>
 
                   <div class="form-actions">
                     <button type="submit" class="btn btn-primary">
@@ -586,6 +587,14 @@ His crew arrived as planned and did a great job!"</p>
     <script>
       document.getElementById('year').textContent =
         new Date().getFullYear();
+
+      window.addEventListener("pageshow", function (event) {
+        if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+          document.querySelectorAll("form").forEach(form => {
+            form.reset();
+          });
+        }
+      });
     </script>
   </footer>
   <!-- Scroll Top -->

@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-  <base href="/new-bjs-lawn-website/">
+  <base href="/">
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Lawn Care & Landscaping in Palatine IL | BJ’s Lawn Service</title>
@@ -73,7 +73,7 @@
         <h1 class="mb-2 mb-lg-0">About Us</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="">Home</a></li>
             <li class="current">About</li>
           </ol>
         </nav>
@@ -88,7 +88,7 @@
         <div class="row align-items-center g-5">
           <div class="col-lg-6">
             <div class="about-content">
-              <h2>About BJ's Lawn Care, Inc., Landscaping &amp; Hardscaping in Palatine, IL</h2>
+              <h2>About BJ's Lawn Service, Inc., Landscaping &amp; Hardscaping in Palatine, IL</h2>
               <p class="lead">We are a family-owned landscaping and hardscaping company based in Palatine, Illinois. Since 2001, we have helped homeowners, HOAs, and businesses maintain and improve their outdoor spaces with dependable service, clear communication, and lasting workmanship.</p>
 
               <div class="achievement-boxes row g-4 mt-4">
@@ -122,9 +122,9 @@
 
           <div class="col-lg-6">
             <div class="about-image position-relative">
-              <img src="assets/img/construction/project-3.webp" alt="Construction Team" class="img-fluid main-image rounded">
+              <img src="assets/img/project-3.webp" alt="Construction Team" class="img-fluid main-image rounded">
               <div class="image-overlay">
-                <img src="assets/img/construction/project-7.webp" alt="Construction Project" class="img-fluid rounded">
+                <img src="assets/img/project-2.webp" alt="Construction Project" class="img-fluid rounded">
               </div>
               <div class="experience-badge">
                 <span>25+</span>
@@ -337,7 +337,7 @@ His crew arrived as planned and did a great job!"</p>
 
       <div class="container">
 
-        <div class="cta-container text-center mt-5">
+        <div class="cta-container text-center mt-0">
           <h3>Ready to Start Your Project?</h3>
           <a href="estimate" class="btn btn-cta">Get Free Estimate</a>
         </div>
@@ -396,6 +396,14 @@ His crew arrived as planned and did a great job!"</p>
     <script>
       document.getElementById('year').textContent =
         new Date().getFullYear();
+
+      window.addEventListener("pageshow", function (event) {
+        if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+          document.querySelectorAll("form").forEach(form => {
+            form.reset();
+          });
+        }
+      });
     </script>
   </footer>
   <!-- Scroll Top -->

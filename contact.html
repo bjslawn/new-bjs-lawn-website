@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-  <base href="/new-bjs-lawn-website/">
+  <base href="/">
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Lawn Care & Landscaping in Palatine IL | BJ’s Lawn Service</title>
@@ -73,7 +73,7 @@
         <h1 class="mb-2 mb-lg-0">Contact Us</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="">Home</a></li>
             <li class="current">Contact</li>
           </ol>
         </nav>
@@ -135,7 +135,7 @@
               <h3>Send Us a Message</h3>
               <p>Send us a message with a brief description of your project or service needs and we’ll get back to you shortly to discuss details and provide an estimate.</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form">
+              <form action="https://formspree.io/f/mykdnjjk" method="post">
                 <div class="form-floating mb-3">
                   <input type="text" class="form-control" id="nameInput" name="name" placeholder="Full Name" required="">
                   <label for="nameInput">Your Name</label>
@@ -149,12 +149,6 @@
                 <div class="form-floating mb-3">
                   <textarea class="form-control" id="messageInput" name="message" rows="5" placeholder="Your Message" style="height: 150px" required=""></textarea>
                   <label for="messageInput">Your Message</label>
-                </div>
-
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
 
                 <div class="d-grid">
@@ -217,6 +211,14 @@
     <script>
       document.getElementById('year').textContent =
         new Date().getFullYear();
+
+      window.addEventListener("pageshow", function (event) {
+        if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+          document.querySelectorAll("form").forEach(form => {
+            form.reset();
+          });
+        }
+      });
     </script>
   </footer>
   <!-- Scroll Top -->
