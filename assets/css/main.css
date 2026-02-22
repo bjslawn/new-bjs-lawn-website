@@ -670,7 +670,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   position: relative;
-  padding: 120px 0;
+  padding: 60px 0;
   background-color: var(--background-color);
   overflow: hidden;
 }
